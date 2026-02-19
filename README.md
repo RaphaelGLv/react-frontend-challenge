@@ -63,7 +63,7 @@ Seu código será revisado como se fosse um Pull Request real para a nossa codeb
 ### 4. Documentação e Git
 
 - Histórico de commits organizado.
-- Arquivo `INSTRUCTIONS.md` com instruções claras de como rodar o projeto.
+- Arquivo `INSTRUCTIONS.md` com instruções claras de como rodar o projeto e qual projeto foi escolhido.
 - Arquivo `ARCHITECTURE.md` explicando suas decisões técnicas (Por que usou X? Como resolveu Y?).
 
 ---

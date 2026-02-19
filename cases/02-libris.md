@@ -10,38 +10,31 @@ Queremos avaliar como você estrutura uma aplicação escalável, lida com dados
 
 Você deve criar uma aplicação onde o usuário possa pesquisar livros na base do Google, ver detalhes e adicioná-los à sua "Estante Virtual" gerenciada localmente.
 
-### 1. Autenticação (Simulada) 🔐
+### 🎯 Funcionalidades Obrigatórias (Core)
 
-Como não temos backend, a autenticação deve ser tratada no front-end:
-
-- Tela de Login com validação via **Zod** (Email válido e senha > 6 caracteres).
-- Ao "logar", gerar um token fictício e persistir no `localStorage` ou `cookie`.
-- Apenas usuários autenticados podem acessar a busca e a estante.
-- **Diferencial:** Persistir a sessão do usuário ao recarregar a página.
-
-### 2. Módulo de Descoberta (Busca) 🔍
-
-- Input de busca conectado à API do Google Books (`GET https://www.googleapis.com/books/v1/volumes?q=...`).
-- **Requisito Técnico:** Implementar **Debounce** no input para não floodar a API.
-- **Paginação:** Implementar paginação (botões ou infinite scroll) usando o parâmetro `startIndex` da API.
-- **Filtros (TanStack Form):** Permitir filtrar por:
-  - Tipo de impressão (`printType`: all, books, magazines).
-  - Ordenação (`orderBy`: relevance, newest).
-
-### 3. A Estante (TanStack Table) 📖
-
-Esta é a área administrativa do usuário. Os livros salvos devem ser exibidos em uma tabela (Data Grid).
-
-- Colunas: Capa (thumb), Título, Autor, Data de Publicação e **Ações**.
-- **Feature de Status:** O usuário deve poder alterar o status do livro na tabela: _Quero Ler_, _Lendo_, _Concluído_.
-- **Ordenação:** Permitir ordenar a tabela por Título ou Status.
-- **Persistência:** Os dados da estante devem sobreviver ao _refresh_ da página (uso de `persist` middleware do Zustand).
-
-### 4. Detalhes do Livro (TanStack Router) 🏷️
-
-- Rota dinâmica `/book/$bookId`.
-- Exibir sinopse completa, informações de editora e link para preview.
-- Botão para adicionar/remover da estante.
+1.  **Autenticação (Simulada):**
+    Como não temos backend, a autenticação deve ser tratada no front-end:
+    - Tela de Login com validação via **Zod** (Email válido e senha > 6 caracteres).
+    - Ao "logar", gerar um token fictício e persistir no `localStorage` ou `cookie`.
+    - Apenas usuários autenticados podem acessar a busca e a estante.
+    - **Diferencial:** Persistir a sessão do usuário ao recarregar a página.
+2.  **Módulo de Descoberta (Busca):**
+    - Input de busca conectado à API do Google Books (`GET https://www.googleapis.com/books/v1/volumes?q=...`).
+    - **Requisito Técnico:** Implementar **Debounce** no input para não floodar a API.
+    - **Paginação:** Implementar paginação (botões ou infinite scroll) usando o parâmetro `startIndex` da API.
+    - **Filtros (TanStack Form):** Permitir filtrar por:
+      - Tipo de impressão (`printType`: all, books, magazines).
+      - Ordenação (`orderBy`: relevance, newest).
+3.  **A Estante:**
+    Esta é a área administrativa do usuário. Os livros salvos devem ser exibidos em uma tabela (Data Grid).
+    - Colunas: Capa (thumb), Título, Autor, Data de Publicação e **Ações**.
+    - **Feature de Status:** O usuário deve poder alterar o status do livro na tabela: _Quero Ler_, _Lendo_, _Concluído_.
+    - **Ordenação:** Permitir ordenar a tabela por Título ou Status.
+    - **Persistência:** Os dados da estante devem sobreviver ao _refresh_ da página (uso de `persist` middleware do Zustand).
+4.  **Detalhes do Livro:**
+    - Rota dinâmica `/book/$bookId`.
+    - Exibir sinopse completa, informações de editora e link para preview.
+    - Botão para adicionar/remover da estante.
 
 ---
 
@@ -57,9 +50,23 @@ Esta é a área administrativa do usuário. Os livros salvos devem ser exibidos 
 
 > **Diferencial:** Implementação de `TanStack Table` para listagens complexas.
 
+## 🏗 Requisitos de Arquitetura
+
+Esperamos ver uma estrutura de projeto que suporte crescimento.
+
+- **Feature-Sliced Design (FSD)** ou **Clean Architecture** adaptada ao Frontend.
+- Isolamento de regras de negócio (hooks customizados vs componentes de UI).
+- **Git Flow:** Utilize commits semânticos e organize seu trabalho em branches/PRs.
+
+## 🎨 UI/UX
+
+- Layout responsivo e fluido.
+- Feedback visual para o usuário (Loadings, Skeletons, Toasts de erro/sucesso).
+- Tema Dark/Light (persistido via Zustand).
+
 ## 🏗 Critérios de Avaliação
 
-Avaliaremos seu teste com base nos seguintes pilares (Pleno/Senior expectations):
+Avaliaremos seu teste com base nos seguintes pilares:
 
 1.  **Arquitetura e Clean Code:**
     - Separação clara de responsabilidades (API Services, Hooks, Components, Utils).

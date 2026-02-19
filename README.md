@@ -73,7 +73,7 @@ Seu código será revisado como se fosse um Pull Request real para a nossa codeb
 1.  Faça um **fork** deste repositório para a sua própria conta do GitHub.
 2.  Desenvolva sua solução em uma branch separada (ex: `feature/cinedash-impl` ou `feature/libris-impl`).
 3.  Quando finalizar, abra um **Pull Request** da sua branch de desenvolvimento para a branch `main` do **seu** repositório forkado. **Atenção: Não abra o PR para o repositório original da empresa.**
-4.  No corpo do PR, utilize o template fornecido e inclua uma breve descrição do que foi feito, suas decisões técnicas e prints/gifs do resultado.
+4.  No corpo do PR, utilize o template fornecido e inclua uma breve descrição do que foi feito, além do projeto escolhido.
 5.  Envie o link do seu Pull Request (ou do repositório) para o recrutador responsável.
 
 ---

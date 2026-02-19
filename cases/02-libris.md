@@ -90,7 +90,7 @@ Avaliaremos seu teste com base nos seguintes pilares (Pleno/Senior expectations)
     - A estrutura de pastas escolhida.
     - Como gerenciou a autenticação sem backend.
     - Desafios encontrados com a API do Google.
-5.  Crie um arquivo `INSTRUCTIONS.md` explicando como rodar seu projeto.
+5.  Crie um arquivo `INSTRUCTIONS.md` explicando o projeto escolhido e como rodar seu projeto.
 6.  No corpo do PR, inclua uma breve descrição do que foi feito.
 7.  Envie o link do seu Pull Request (ou do repositório) para o recrutador responsável.
 

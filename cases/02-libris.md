@@ -83,16 +83,16 @@ Avaliaremos seu teste com base nos seguintes pilares (Pleno/Senior expectations)
 
 ## 🚀 Como entregar
 
-1.  Crie um repositório privado e nos convide.
+1.  Faça um **fork** deste repositório para a sua própria conta do GitHub.
 2.  Desenvolva sua solução em uma branch separada (ex: `feature/libris-impl`).
-3.  Quando finalizar, abra um **Pull Request** para a branch `main` do seu repositório.
+3.  Quando finalizar, abra um **Pull Request** para a branch `main` do **seu** repositório forkado.
 4.  Crie um arquivo `ARCHITECTURE.md` explicando:
     - A estrutura de pastas escolhida.
     - Como gerenciou a autenticação sem backend.
     - Desafios encontrados com a API do Google.
 5.  Crie um arquivo `INSTRUCTIONS.md` explicando como rodar seu projeto.
 6.  No corpo do PR, inclua uma breve descrição do que foi feito.
-7.  Envie o link do repositório para o recrutador.
+7.  Envie o link do seu Pull Request (ou do repositório) para o recrutador responsável.
 
 **Dica:** A Google Books API não exige chave para testes simples, mas pode ter rate limits. Se desejar, crie uma chave de API gratuita no Google Cloud Console, mas garanta que o projeto rode sem ela ou forneça instruções no `.env.example`.
 

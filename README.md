@@ -70,11 +70,11 @@ Seu código será revisado como se fosse um Pull Request real para a nossa codeb
 
 ## 🚀 Como entregar
 
-1.  Crie um repositório privado e nos convide.
-2.  Desenvolva sua solução em uma branch separada (ex: `feature/cinedash-impl`).
-3.  Quando finalizar, abra um **Pull Request** para a branch `main` do seu repositório.
-4.  No corpo do PR, inclua uma breve descrição do que foi feito.
-5.  Envie o link do repositório para o recrutador.
+1.  Faça um **fork** deste repositório para a sua própria conta do GitHub.
+2.  Desenvolva sua solução em uma branch separada (ex: `feature/cinedash-impl` ou `feature/libris-impl`).
+3.  Quando finalizar, abra um **Pull Request** da sua branch de desenvolvimento para a branch `main` do **seu** repositório forkado. **Atenção: Não abra o PR para o repositório original da empresa.**
+4.  No corpo do PR, utilize o template fornecido e inclua uma breve descrição do que foi feito, suas decisões técnicas e prints/gifs do resultado.
+5.  Envie o link do seu Pull Request (ou do repositório) para o recrutador responsável.
 
 ---
 
